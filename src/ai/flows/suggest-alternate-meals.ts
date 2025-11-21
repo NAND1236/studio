@@ -34,13 +34,13 @@ const prompt = ai.definePrompt({
   output: {schema: SuggestAlternateMealsOutputSchema},
   prompt: `You are a nutritional expert. A user has exceeded their daily calorie limit and is looking for suggestions for alternative meals for the rest of the day.
 
-  The user has already consumed the following meals: {{{currentMeals}}}
+  The user has already consumed the following meals: {{currentMeals}}
 
-  The user's daily calorie limit is: {{{dailyCalorieLimit}}}
+  The user's daily calorie limit is: {{dailyCalorieLimit}}
 
-  {% if preferredFoods %}The user prefers the following foods: {{{preferredFoods}}}{% endif %}
+  {{#if preferredFoods}}The user prefers the following foods: {{preferredFoods}}{{/if}}
 
-  {% if foodRestrictions %}The user has the following food restrictions: {{{foodRestrictions}}}{% endif %}
+  {{#if foodRestrictions}}The user has the following food restrictions: {{foodRestrictions}}{{/if}}
 
   Suggest alternative meal options that are lower in calories and align with the user's preferences and restrictions. The suggestions should fit within the remaining calorie budget.
   Be accurate and precise with the calorie estimations.

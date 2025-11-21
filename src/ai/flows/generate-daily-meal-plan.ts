@@ -47,9 +47,9 @@ const prompt = ai.definePrompt({
   output: {schema: GenerateDailyMealPlanOutputSchema},
   prompt: `You are a personal AI dietitian. Your task is to create a detailed meal plan for the user for the next day, considering their dietary preferences, restrictions, and calorie goals. The meal plan should be realistic and easy to follow, with specific suggestions for breakfast, lunch, dinner, and snacks. Include calorie counts for each item. The plan should have enough details that the user has precise options to follow.
 
-Dietary Preferences: {{{preferredFoods}}}
-Dietary Restrictions: {{{restrictions}}}
-Calorie Goal: {{{calorieGoal}}} calories
+Dietary Preferences: {{preferredFoods}}
+Dietary Restrictions: {{restrictions}}
+Calorie Goal: {{calorieGoal}} calories
 
 Provide a detailed meal plan for the next day, including specific meal suggestions and calorie counts for each item. Be very precise. Format as markdown.`,
 });
